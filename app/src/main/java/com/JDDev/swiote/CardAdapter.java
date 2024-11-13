@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import java.util.Random;
@@ -37,8 +38,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
         int blue = 200 + random.nextInt(56); // Between 200-255
         int color = Color.rgb(red, green, blue);
 
-        holder.itemView.setBackgroundColor(color);
+        // Set the background color and corner radius on the CardView
+        if (holder.itemView instanceof CardView) {
+            CardView cardView = (CardView) holder.itemView;
+            cardView.setCardBackgroundColor(color);
+            cardView.setRadius(50f); // 10dp in pixels
+        }
     }
+
 
     @Override
     public int getItemCount() {
@@ -46,6 +53,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     }
 
     class CardViewHolder extends RecyclerView.ViewHolder {
+        public CardView cardView;
         TextView quoteText;
         TextView bookTitleText;
 

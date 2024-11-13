@@ -5,19 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#09090b"
     android:orientation="vertical"
-    tools:context=".MainActivity"
 
-    >
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="47dp"
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/poppins_semibold"
         android:text="Swiote"
         android:textAlignment="center"
+        android:textColor="#fefefe"
         android:textSize="34sp" />
 
     <androidx.viewpager2.widget.ViewPager2
@@ -31,6 +32,10 @@
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Next" />
+        android:backgroundTint="@color/black"
+        android:text="Next"
+        app:cornerRadius="10dp"
+        app:strokeColor="#fefefe"
+        app:strokeWidth="5px" />
 
 </LinearLayout>
