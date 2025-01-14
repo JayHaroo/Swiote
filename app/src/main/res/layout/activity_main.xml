@@ -5,9 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="30px"
     android:background="@drawable/background"
-    android:orientation="vertical"
 
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -29,14 +30,29 @@
         android:layout_marginTop="30px"
         android:radius="10dp" />
 
-    <Button
-        android:id="@+id/nextBtn"
-        android:layout_width="342dp"
+    <LinearLayout
+        android:layout_width="376dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50px"
-        android:backgroundTint="#C3853C"
-        android:text="Next"
-        app:cornerRadius="10dp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="30px"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30px"
+            android:backgroundTint="#C3853C"
+            android:text="Next"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/copyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Copy Text" />
+    </LinearLayout>
 
 </LinearLayout>
