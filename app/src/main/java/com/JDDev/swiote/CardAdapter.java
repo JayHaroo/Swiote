@@ -36,7 +36,12 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
         int red = 200 + random.nextInt(56); // Between 200-255
         int green = 200 + random.nextInt(56); // Between 200-255
         int blue = 200 + random.nextInt(56); // Between 200-255
-        int color = Color.rgb(red, green, blue);
+
+        // Convert RGB to hex and add B3 (70% transparency) as the alpha
+        String hexColor = String.format("#CC%02X%02X%02X", red, green, blue);
+
+        // Parse hex to Color and set background color
+        int color = Color.parseColor(hexColor);
 
         // Set the background color and corner radius on the CardView
         if (holder.itemView instanceof CardView) {
@@ -45,7 +50,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             cardView.setRadius(50f); // 10dp in pixels
         }
     }
-
 
     @Override
     public int getItemCount() {
