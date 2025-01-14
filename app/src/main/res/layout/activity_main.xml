@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="30px"
     android:background="@drawable/background"
 
     android:orientation="vertical"
@@ -31,7 +30,7 @@
         android:radius="10dp" />
 
     <LinearLayout
-        android:layout_width="376dp"
+        android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30px"
@@ -39,7 +38,7 @@
 
         <Button
             android:id="@+id/nextBtn"
-            android:layout_width="187dp"
+            android:layout_width="212dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30px"
@@ -49,7 +48,7 @@
 
         <Button
             android:id="@+id/copyBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Copy Text" />

@@ -1,5 +1,8 @@
 package com.JDDev.swiote;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.widget.Button;
@@ -57,5 +60,15 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(currentItem + 1);
             }
         });
+
+        Button copyBtn = findViewById(R.id.copyBtn);
+        copyBtn.setOnClickListener(v -> {
+            int currentItem = viewPager.getCurrentItem();
+            String currentItemText = quotes.get(currentItem).getQuote();
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("Copied to clipboard!", currentItemText);
+            clipboard.setPrimaryClip(clip);
+        });
     }
+
 }
