@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#09090b"
+    android:background="@drawable/background"
     android:orientation="vertical"
 
     tools:context=".MainActivity">
@@ -18,13 +18,15 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="Swiote"
         android:textAlignment="center"
-        android:textColor="#fefefe"
+        android:textColor="#FFFFFF"
         android:textSize="34sp" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="652dp"
+        android:layout_width="332dp"
+        android:layout_height="589dp"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_marginTop="30px"
         android:radius="10dp" />
 
     <Button
@@ -32,10 +34,9 @@
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/black"
+        android:layout_marginTop="50px"
+        android:backgroundTint="#C3853C"
         android:text="Next"
-        app:cornerRadius="10dp"
-        app:strokeColor="#fefefe"
-        app:strokeWidth="5px" />
+        app:cornerRadius="10dp" />
 
 </LinearLayout>
